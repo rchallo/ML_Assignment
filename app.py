@@ -40,6 +40,23 @@ models = {
     "XGBoost": os.path.join(MODEL_DIR, "XGBoost.pkl")
 }
 
+# ---------- Download Sample Test File ----------
+DATA_DIR = os.path.join(BASE_DIR, "data")
+test_file_path = os.path.join(DATA_DIR, "test_data.csv")
+
+st.markdown("### 📥 Download Sample Test Dataset")
+
+if os.path.exists(test_file_path):
+    with open(test_file_path, "rb") as file:
+        st.download_button(
+            label="Download test_data.csv",
+            data=file,
+            file_name="test_data.csv",
+            mime="text/csv"
+        )
+else:
+    st.warning("Sample test_data.csv not found in data folder.")
+
 uploaded_file = st.file_uploader("Upload Test CSV File", type=["csv"])
 
 if uploaded_file is not None:
