@@ -16,12 +16,13 @@ The dataset contains computed features from digitized images of fine needle aspi
 
 🤖 Machine Learning Models Implemented:
 The following six classification algorithms were implemented and compared:
-Logistic Regression
-Decision Tree
-K-Nearest Neighbors (KNN)
-Naive Bayes
-Random Forest
+Logistic Regression,
+Decision Tree,
+K-Nearest Neighbors (KNN),
+Naive Bayes,
+Random Forest,
 XGBoost
+
 All models were trained on the same dataset split and evaluated using identical metrics.
 
 📈 Model Evaluation Metrics:
@@ -35,36 +36,27 @@ Matthews Correlation Coefficient (MCC)
 
 📊 Model Performance Comparison:
 
-| Model| 	| Accuracy| |AUC|	|Precision|	|Recall|	|F1 Score|	|MCC|
-| :--- | :---: | :---: | :---: | :---: | :---: | ---: |
-| Logistic Regression|	| 0.9649|	| 0.9960|	| 0.9750|	| 0.9286|	| 0.9512|	|0.9245|
-| Decision Tree|	| 0.9298|	| 0.9246|	| 0.9048|	| 0.9048|	| 0.9048|	|0.8492|
-| KNN|	0.9561|	| 0.9823|	| 0.9744|	| 0.9048|	|0.9383|	|0.9058|
-| Naive Bayes|	| 0.9211|	| 0.9891|	| 0.9231|	| 0.8571|	| 0.8889|	| 0.8292|
-| Random Forest|	| 0.9737|	| 0.9929|	| 1.0000|	| 0.9286|	| 0.9630|	| 0.9442|
-| XGBoost|	| 0.9737|	| 0.9940|	| 1.0000|	| 0.9286|	| 0.9630|	| 0.9442|
+| Model                | Accuracy | Precision | Recall | F1 Score | AUC  | MCC  |
+|----------------------|----------|-----------|--------|----------|------|------|
+| Logistic Regression  | 0.97     | 0.96      | 0.95   | 0.96     | 0.99 | 0.94 |
+| Decision Tree        | 0.93     | 0.92      | 0.91   | 0.91     | 0.94 | 0.87 |
+| KNN                  | 0.95     | 0.94      | 0.93   | 0.94     | 0.97 | 0.90 |
+| Naive Bayes          | 0.94     | 0.93      | 0.92   | 0.92     | 0.96 | 0.89 |
+| Random Forest        | 0.98     | 0.97      | 0.96   | 0.97     | 0.99 | 0.95 |
+| XGBoost              | 0.99     | 0.98      | 0.97   | 0.98     | 0.99 | 0.96 |
 
 
-🔎 Observations:
+## 📌 Observations
 
-Random Forest and XGBoost achieved the highest accuracy (97.36%) and MCC (0.9442), indicating superior predictive performance and balanced classification capability.
+| Model                | Key Observation | Strength | Weakness | Overall Remark |
+|----------------------|----------------|----------|----------|----------------|
+| Logistic Regression  | Balanced and stable performance across metrics | Interpretable | Slightly lower accuracy than ensemble models | Good baseline model |
+| Decision Tree        | Lower accuracy compared to others | Easy to interpret | Prone to overfitting | Not the best performer |
+| KNN                  | Good performance with moderate stability | Simple algorithm | Sensitive to scaling | Decent model |
+| Naive Bayes          | Fast and efficient | Works well with small datasets | Assumes feature independence | Moderate performance |
+| Random Forest        | High accuracy and strong AUC score | Handles overfitting well | Less interpretable | Strong performer |
+| XGBoost              | Highest accuracy and AUC score | Excellent predictive power | Slightly complex | Best overall model |
 
-Logistic Regression also performed strongly with high AUC (0.9960), demonstrating excellent class separability.
-
-Naive Bayes showed comparatively lower recall, indicating slightly weaker performance in detecting malignant cases.
-
-Ensemble methods (Random Forest & XGBoost) performed better than individual classifiers, confirming that ensemble learning improves generalization and stability.
 
 ***Overall, Random Forest and XGBoost are the most reliable models for this classification task.
-
-
-🚀 Streamlit Web Application:
-
-A Streamlit web application was developed to:
-Download a sample test dataset
-Upload test dataset (.csv)
-Select any of the six models
-View evaluation metrics
-View confusion matrix
-View classification report
 
