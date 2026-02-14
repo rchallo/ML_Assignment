@@ -1,1 +1,6 @@
-This document is all about the requiements of this assignment.
+streamlit
+pandas
+numpy
+scikit-learn
+xgboost
+joblib
