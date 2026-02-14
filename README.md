@@ -37,19 +37,29 @@ Matthews Correlation Coefficient (MCC)
 
 | Model| 	| Accuracy| |AUC|	|Precision|	|Recall|	|F1 Score|	|MCC|
 | :--- | :---: | :---: | :---: | :---: | :---: | ---: |
-Logistic Regression	0.9649	0.9960	0.9750	0.9286	0.9512	0.9245
-Decision Tree	0.9298	0.9246	0.9048	0.9048	0.9048	0.8492
-KNN	0.9561	0.9823	0.9744	0.9048	0.9383	0.9058
-Naive Bayes	0.9211	0.9891	0.9231	0.8571	0.8889	0.8292
-Random Forest	0.9737	0.9929	1.0000	0.9286	0.9630	0.9442
-XGBoost	0.9737	0.9940	1.0000	0.9286	0.9630	0.9442
-🔎 Observations
+| Logistic Regression|	| 0.9649|	| 0.9960|	| 0.9750|	| 0.9286|	| 0.9512|	|0.9245|
+| Decision Tree|	| 0.9298|	| 0.9246|	| 0.9048|	| 0.9048|	| 0.9048|	|0.8492|
+| KNN|	0.9561|	| 0.9823|	| 0.9744|	| 0.9048|	|0.9383|	|0.9058|
+| Naive Bayes|	| 0.9211|	| 0.9891|	| 0.9231|	| 0.8571|	| 0.8889|	| 0.8292|
+| Random Forest|	| 0.9737|	| 0.9929|	| 1.0000|	| 0.9286|	| 0.9630|	| 0.9442|
+| XGBoost|	| 0.9737|	| 0.9940|	| 1.0000|	| 0.9286|	| 0.9630|	| 0.9442|
+
+
+🔎 Observations:
+
 Random Forest and XGBoost achieved the highest accuracy (97.36%) and MCC (0.9442), indicating superior predictive performance and balanced classification capability.
+
 Logistic Regression also performed strongly with high AUC (0.9960), demonstrating excellent class separability.
+
 Naive Bayes showed comparatively lower recall, indicating slightly weaker performance in detecting malignant cases.
+
 Ensemble methods (Random Forest & XGBoost) performed better than individual classifiers, confirming that ensemble learning improves generalization and stability.
-Overall, Random Forest and XGBoost are the most reliable models for this classification task.
-🚀 Streamlit Web Application
+
+***Overall, Random Forest and XGBoost are the most reliable models for this classification task.
+
+
+🚀 Streamlit Web Application:
+
 A Streamlit web application was developed to:
 Download a sample test dataset
 Upload test dataset (.csv)
